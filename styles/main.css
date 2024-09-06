@@ -1,0 +1,76 @@
+:root {
+    --max-z-idx: 9999;
+    --text-color: #e2d3d3;
+}
+
+html,body {
+    margin: 0;
+    height: 100%;
+
+    background: linear-gradient(135deg,#3A1078,#3A1078,#3795BD);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-bar {
+    width: 100vw;
+    padding: 10px;
+    position: fixed;
+    z-index: var(--max-z-idx);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(135deg, #1a237e, #4a148c, #7c4dff);
+    border-bottom: 1px solid #000000;
+
+    flex-shrink: 0;
+}
+
+#password-profile-container {
+    margin-top: 80px;
+    flex: 1;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.password-profile {
+    background-color: #393939;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 1px;
+    height: auto;
+}
+
+.password-profile-title {
+    color: var(--text-color);
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.password-profile-description {
+    color: var(--text-color);
+    padding-left: 10px;
+}
+
+.title {
+    color: #ada7a7;
+    margin: 0;
+    font-size: 34px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 40%;
+    margin-right: 1.5rem;
+
+    box-shadow: 3px 3px 6px rgba(0,0,0,1);
+}
