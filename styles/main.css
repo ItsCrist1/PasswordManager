@@ -5,7 +5,7 @@
 
 html,body {
     margin: 0;
-    height: 100%;
+    height: 100vh;
 
     background: linear-gradient(135deg,#3A1078,#3A1078,#3795BD);
 }
@@ -30,33 +30,6 @@ body {
     flex-shrink: 0;
 }
 
-#password-profile-container {
-    margin-top: 80px;
-    flex: 1;
-    height: calc(100vh - 80px);
-    overflow-y: auto;
-}
-
-.password-profile {
-    background-color: #393939;
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-bottom: 1px;
-    height: auto;
-}
-
-.password-profile-title {
-    color: var(--text-color);
-    padding-left: 10px;
-    padding-top: 10px;
-}
-
-.password-profile-description {
-    color: var(--text-color);
-    padding-left: 10px;
-}
-
 .title {
     color: #ada7a7;
     margin: 0;
@@ -73,4 +46,78 @@ body {
     margin-right: 1.5rem;
 
     box-shadow: 3px 3px 6px rgba(0,0,0,1);
+}
+
+#password-profile-container {
+    margin-top: 80px;
+    flex: 1;
+    height: calc(100vh - 80px);
+    overflow-y:scroll;
+}
+
+.password-profile {
+    background-color: #393939;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-bottom: 1px;    
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-profile-info-container {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.password-profile-title {
+    color: var(--text-color);
+}
+
+.password-profile-description {
+    color: var(--text-color);
+}
+
+.password-profile-password-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 20px;
+    padding: 5px;
+
+    transition: background-color 0.3s ease;
+}
+
+.password-profile-password-container:hover {
+    background-color: #646464;
+    cursor: pointer;
+}
+
+.password-profile-password {
+    color: var(--text-color);
+    font-size: 18px;
+    padding-right: 10px;
+    user-select: none;
+}
+
+.password-profile-checkbox {
+    width: 20px;
+    height: 20px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #333;
+    border-radius: 3px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.password-profile-checkbox:checked {
+    background-color: green;
+    position: relative;
 }

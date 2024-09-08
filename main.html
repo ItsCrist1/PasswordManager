@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,22 +13,24 @@
             <h1 class="title">Password Manager</h1>
             <img src="images/profile-pic.webp" alt="Profile Picture" class="profile-pic">
         </header>
-
+        
         <main id="password-profile-container">
-            
-        </main>
-
-        <footer>
-            
-        </footer>
-
-        <template id="password-profile-template">
-            <div class="password-profile">
+    </body>
+        
+    <template id="password-profile-template">
+        <div class="password-profile">
+            <div class="password-profile-info-container">
                 <h2 class="password-profile-title"></h2>
                 <h3 class="password-profile-description"></h3>
             </div>
-        </template>
-    
-        <script src="main.js"></script>
-    </body>
+                
+            <div class="password-profile-password-container">
+                <p class="password-profile-password"></p>
+                <input type="checkbox" class="password-profile-checkbox">
+            </div>
+        </div>
+    </template>
+        
+    <script src="scripts/main.js"></script>
+    <script src="scripts/passwd_gen.js"></script>
 </html>
